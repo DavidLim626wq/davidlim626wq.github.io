@@ -27,6 +27,10 @@ $(document).ready(function () {
         $('.contact').css('opacity', '1');
         $('.contact').addClass('animated fadeInRight');
     }, 800);
+	setTimeout(function () {
+        $('.newlink').css('opacity', '1');
+        $('.newlink').addClass('animated fadeInRight');
+    }, 900);
 
 
     $('.about').on('click', function () {
@@ -72,6 +76,10 @@ $(document).ready(function () {
             $('.pantaportfolio').fadeIn('fast');
 
         });
+    });
+	
+	
+	$('.newsite').on('click', function () {
     });
 
 
