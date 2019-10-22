@@ -34,7 +34,7 @@ $(document).ready(function () {
             opacity: "0",
         }, 300);
         $("body").animate({
-            backgroundColor: "#8D6A9F",
+            backgroundColor: "#FEDCDF",
         }, 500);
 
         $('#home').fadeOut('fast', function () {
@@ -88,7 +88,7 @@ $(document).ready(function () {
     ************************************************/
     $('.homes').on('click', function () {
         $("body").animate({
-            backgroundColor: "#DE6449",
+            backgroundColor: "#132398",
         }, 500);
 
         $('.pantaskills').fadeOut('fast', function () {
@@ -120,7 +120,7 @@ $(document).ready(function () {
 
     $('.homep').on('click', function () {
         $("body").animate({
-            backgroundColor: "#DE6449",
+            backgroundColor: "#132398",
         }, 500);
 
         $('.pantaportfolio').fadeOut('fast', function () {
@@ -133,7 +133,7 @@ $(document).ready(function () {
     ************************************************/
     $('.homea').on('click', function () {
         $("body").animate({
-            backgroundColor: "#DE6449",
+            backgroundColor: "#132398",
         }, 500);
 
         $('.pantaabout').fadeOut('fast', function () {
