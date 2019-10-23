@@ -8,8 +8,9 @@ body {
 }
 
 img{
-	max-width: 93%;
-    max-height: 93%;
+	max-width: 92%;
+	max-height: 92%;
+	object-fit: contain;
 	padding = 3px;
 }
 
