@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <meta charset="utf-8">
+
+  <title>Cho-Han Game</title>
+  <meta name="description" content="Cho Han">
+  <meta name="author" content="DavidLim626wq">
+
+  <link rel="stylesheet" href="chohan.css">
+
+<p>Cho-Han is a traditional Japanese game that is played with two dice.  The premise is quite simple:  The better bets on whether the sum on the dice will be even or odd.</p>
+<p>Such a game is ideal for teaching conditional statements to first-time programmers.</p>
+  
+<div id="dice1"></div><div id="dice2"></div>
+
+<form>
+  Wager:
+  <input id=makeBet type="range" min="1" max="50" value="25" step="1" onchange="showValue(this.value)" />
+  <span id="showBet">10</span> dollar(s)
+  <button type="button" onclick="oe = 0; winOrLose()">EVEN</button>
+  <button type="button" onclick="oe = 1; winOrLose()">ODD</button>
+</form>
+<p id="msg"></p>
+You have <div id=money>500</div> dollars.
+
+</head>
+
+<body>
+  <script src="chohan.js"></script>
+</body>
+</html>
