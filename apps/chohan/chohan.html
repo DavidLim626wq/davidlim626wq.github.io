@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  You rolled:  <span id="dice"></span>
+<div id="evenodd"></div>
+<form>
+  Wager:
+  <input id=makeBet type="range" min="1" max="20" value="10" step="1" onchange="showValue(this.value)" />
+  <span id="showBet">10</span> dollar(s)
+  <button type="button" onclick="oe = 0; winOrLose()">EVEN</button>
+  <button type="button" onclick="oe = 1; winOrLose()">ODD</button>
+</form>
+<p id="msg"></p>
+You have <span id=money>500</span> dollars.
+
+  <script src="chohan.js"></script>
+</body>
+</html>
