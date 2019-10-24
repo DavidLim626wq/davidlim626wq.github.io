@@ -2,17 +2,19 @@
 body {
     margin: 0;
     font-family: 'Roboto Slab', serif;
-	font-size: 18px;	
-    background-color: #009FB7;
+	font-size: 22px;	
+    background-color: #8EB8E5;
     display: flex;
+	position: relative;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: stretch;
-    position: absolute;
     width: 94%;
     height: 94%;
+	min-height: 100vh;
+	color: #492C1D;
 }
 
 img{
@@ -22,15 +24,27 @@ img{
 	padding: 3px;
 }
 
+#game
+{
+	width: 470px;
+	background-color: #7C99B4;
+	justify-content: center;
+}
+
 #dice1, #dice2{
 	height: 200px;
 	width: 200px;
-	background-color: #108FA4;
+
 	justify-content: center;
 	vertical-align: middle;
 	display: flex;
+	flex-direction: row;
 }
 
 #money{
-	display: inline-block;
+	float: left;
+}
+
+p{
+	text-align: center;
 }
