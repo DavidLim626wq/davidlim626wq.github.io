@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vigenere.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo:200,300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300" rel="stylesheet">
+    <script src="Vigenere.js"></script>
+    <title>Vigenere Cipher</title>
+</head>
+
+<body>
+    <main>
+        <h1 id="titulo"> Vigenere Cipher Demonstration </h1>
+		<div id="description">
+		<p>First described by Giovan Battista Bellaso in 1553, the Vigenere ciphere was used until the time of the American Civil War.</p>
+		<p>The cipher operates by using a <i>key</i> to encode a plaintext message.  A number is assigned to each letter in the key; for example A=0, B=1, and so on.  Each letter in plaintext message is shifted by the number of letters indicated by the key, iterating through the key one position at a time.</p>
+		<p>For example, to encode the message "Hello" using the key "SUN", we would first convert SUN into numerical values 18, 20, and 13.  The first letter in the message, H would be shifted by 18 spaces to get Z.  Then, since the next letter in the key is U, we would shift 'E" to get Y and so on.  When you get to the last letter in the key, you start over.  Therefore, the second "L" is encoded using the letter "S" as the key.</p>
+		</div>
+		
+        <section id="stuff">
+			<div class="row">
+				
+				<div class="col-md-5">
+				
+					
+					<div class="form-row">
+					<div class="col">
+					<input type="text" class="form-control" id="key" placeholder="Key">
+					</div>
+					<div class="col">
+					<button type="submit" class="btn btn-primary mb-2">Submit</button>
+					</div>
+				
+				
+					
+					<label for="plainText">PlainText</label>			
+					<textarea class="form-control" id="plainText" rows="12" cols="84" maxlength="1000" class="w-75 p-3"></textarea>
+				</div>
+				</div>
+				
+				
+				<div class="col-md-5">
+					CipherText
+					<div id="ciphertext">
+					Encoded Text Will Appear Here.
+					</div>
+				</div>
+			
+			</div>
+			
+			
+		</section>
+    </main>
+	
+	       <h2 style="font-size: 20px;font-weight: 200;"><i class="fa fa-code" aria-hidden="true"></i> by DavidLim626wq</h2>
+</body>
+
+</html>
