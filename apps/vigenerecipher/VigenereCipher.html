@@ -28,27 +28,29 @@
         <section id="stuff">
 			<div class="row">
 				
-				<div class="col-md-5">
+				<div class="col-md-6">
 				
 					
-					<div class="form-row">
-					<div class="col">
-					<input type="text" class="form-control" id="key" placeholder="Key">
-					</div>
-					<div class="col">
-					<button type="submit" class="btn btn-primary mb-2">Submit</button>
+					<div class="form-group row">
+						<label for="key" class="col-md-2 col-form-label">Key: </label>
+						<div class="col-md-8">
+						<input type="text" class="form-control" id="key" placeholder="Key">
+						</div>
+						<div class="col-md-2">
+						<button type="submit" class="btn btn-primary mb-2">Submit</button>
+						</div>
 					</div>
 				
 				
 					
 					<label for="plainText">PlainText</label>			
 					<textarea class="form-control" id="plainText" rows="12" cols="84" maxlength="1000" class="w-75 p-3"></textarea>
-				</div>
+				
 				</div>
 				
 				
-				<div class="col-md-5">
-					CipherText
+				<div class="col-md-6">
+					<div id="box_header">CipherText</div>
 					<div id="ciphertext">
 					Encoded Text Will Appear Here.
 					</div>

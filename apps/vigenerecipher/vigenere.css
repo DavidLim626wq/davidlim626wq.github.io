@@ -12,6 +12,11 @@ h2
 	text-align: center;
 }
 
+h3
+{
+	margin-top = 0px;
+}
+
 #titulo
 {
 	text-align: center;
@@ -38,11 +43,19 @@ textarea#plainText
 	background-color: #aee3a6;
 	border-width: 2px;
 	border-color: #0f3800;
+	font-size: 12pt;
 }
 
 #stuff
 {
-	width: 92%;
+	width: 93%;
 	padding: 3px;
 	margin: auto;
+	margin-top: 13px;
+}
+
+#box_header
+{
+	font-size: 22px;
+	margin-bottom: 3px;
 }
