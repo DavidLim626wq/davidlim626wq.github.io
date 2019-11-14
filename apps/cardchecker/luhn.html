@@ -13,27 +13,28 @@
     <link href="https://fonts.googleapis.com/css?family=Cairo:200,300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300" rel="stylesheet">
     <script src="luhn.js"></script>
-    <title>Vigenere Cipher</title>
+    <title>Credit Card Number Validator</title>
 </head>
 
 <body>
     <main>
         <h1 id="titulo"> Credit Card Validator </h1>
 		<div id="description">
-		<p>This page uses the Luhn-10 Algorithm to check the validity of a Credit Card</p>
+		<p>This mini-app uses the Luhn-10 Algorithm to check the validity of a Credit Card</p>
 		</div>
 		
         <div id="cardchecker">
 
 				
 				
-				
-				
+			
 						<label for="number" class="col-md-2 col-form-label">Number: </label>
 						<input type="text" class="form-control" id="number" placeholder="Enter Card Number">
 
 
-						<button type="submit" class="btn btn-primary mb-2">Check</button>
+						<button type="submit" class="btn btn-primary mb-2 md-4">Check</button>
+						
+						<div id="valid"></div>
 			
 			
 			

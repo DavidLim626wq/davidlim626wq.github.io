@@ -1,0 +1,21 @@
+body{
+	width: 60%;
+	text-align: center;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue
+  
+}
+input:focus {
+  border-color: green
+}
+
+#cardchecker{
+	width: 93%;
+	padding: 3px;
+	margin: auto;
+	margin-top: 13px;
+}

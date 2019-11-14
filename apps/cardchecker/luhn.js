@@ -4,7 +4,7 @@ function isNumeric(str) {
 
 
 function luhnten(n){
-	//strip whitespace and punctuation
+	//Return true if it is a valid number
 	var sum = 0;
 	n = n.split("").reverse();
 	for(var i = 0; i < n.length; i++){
@@ -17,7 +17,6 @@ function luhnten(n){
 			sum += parseInt(n[i]);
 		}
 	}
-	
 	return(sum % 10 == 0);
 }
 
@@ -25,7 +24,7 @@ function luhnten(n){
 
 $(function(){
 	$('button').click(function(){
-		var n = $("#number").val();
-		console.log(luhnten(n));
+		var t = luhnten($("#number").val()) ? "Valid Card" : "Invalid Card";
+		$("#valid").text(t);
 		});
 	});
