@@ -2,10 +2,10 @@ function isAlpha(str) {
   return /^[a-zA-Z]+$/.test(str);
 }
 
-function vigenere(str, key){
+function vigenere(msg, key){
 	//strip whitespace and punctuation
 	var ciphertext = '';
-	str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\1-9s]/g,"").toUpperCase();
+	msg = msg.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\1-9s]/g,"").toUpperCase();
 	key = key.toUpperCase();
 	if (isAlpha(key) == false)
 	{
@@ -13,9 +13,9 @@ function vigenere(str, key){
 	}
 	else
 	{
-	for(var i = 0; i < str.length; i++){
+	for(var i = 0; i < msg.length; i++){
 	shift = key[i % key.length].charCodeAt(0) - 65;
-	c = ((str[i].charCodeAt(0) - 65) + shift) % 26;
+	c = ((msg[i].charCodeAt(0) - 65) + shift) % 26;
 	ciphertext += String.fromCharCode(c + 65);
 	}
 	}

@@ -20,7 +20,7 @@
     <main>
         <h1 id="titulo"> Vigenere Cipher Demonstration </h1>
 		<div id="description">
-		<p>First described by Giovan Battista Bellaso in 1553, the Vigenere ciphere was used until the time of the American Civil War.</p>
+		<p>First described by Giovan Battista Bellaso in 1553, the Vigenere ciphere was used until the time of the American Civil War and once thought unbreakable.</p>
 		<p>The cipher operates by using a <i>key</i> to encode a plaintext message.  A number is assigned to each letter in the key; for example A=0, B=1, and so on.  Each letter in plaintext message is shifted by the number of letters indicated by the key, iterating through the key one position at a time.</p>
 		<p>For example, to encode the message "Hello" using the key "SUN", we would first convert SUN into numerical values 18, 20, and 13.  The first letter in the message, H would be shifted by 18 spaces to get Z.  Then, since the next letter in the key is U, we would shift 'E" to get Y and so on.  When you get to the last letter in the key, you start over.  Therefore, the second "L" is encoded using the letter "S" as the key.</p>
 		</div>
@@ -37,7 +37,7 @@
 						<input type="text" class="form-control" id="key" placeholder="Key">
 						</div>
 						<div class="col-md-2">
-						<button type="submit" class="btn btn-primary mb-2">Submit</button>
+						<button type="submit" class="btn btn-primary mb-2">Encode!</button>
 						</div>
 					</div>
 				
