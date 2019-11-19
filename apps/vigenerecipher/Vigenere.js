@@ -1,1 +1,35 @@
-var _0x1097=['#plainText','#ciphertext','text','test','toUpperCase','length','charCodeAt','button','click','#key','val'];(function(_0x2b5293,_0x1f40db){var _0x11f7de=function(_0x290aa7){while(--_0x290aa7){_0x2b5293['push'](_0x2b5293['shift']());}};_0x11f7de(++_0x1f40db);}(_0x1097,0xbe));var _0x2b73=function(_0x27309d,_0x1f8845){_0x27309d=_0x27309d-0x0;var _0x38e97a=_0x1097[_0x27309d];return _0x38e97a;};function isAlpha(_0xd21649){return/^[a-zA-Z]+$/[_0x2b73('0x0')](_0xd21649);}function vigenere(_0x3018de,_0x1fe4d5){var _0x4af756='';_0x3018de=_0x3018de['replace'](/[.,\/#!$%\^&\*;:{}=\-_`~()\1-9s]/g,'')[_0x2b73('0x1')]();_0x1fe4d5=_0x1fe4d5['toUpperCase']();if(isAlpha(_0x1fe4d5)==![]){_0x4af756='Error:\x20Key\x20can\x20only\x20contain\x20letters\x20A-Z';}else{for(var _0x18d4de=0x0;_0x18d4de<_0x3018de[_0x2b73('0x2')];_0x18d4de++){shift=_0x1fe4d5[_0x18d4de%_0x1fe4d5[_0x2b73('0x2')]]['charCodeAt'](0x0)-0x41;c=(_0x3018de[_0x18d4de][_0x2b73('0x3')](0x0)-0x41+shift)%0x1a;_0x4af756+=String['fromCharCode'](c+0x41);}}return _0x4af756;}$(function(){$(_0x2b73('0x4'))[_0x2b73('0x5')](function(){var _0x60e632=$(_0x2b73('0x6'))[_0x2b73('0x7')]();var _0x10b031=$(_0x2b73('0x8'))[_0x2b73('0x7')]();ct=vigenere(_0x10b031,_0x60e632);$(_0x2b73('0x9'))[_0x2b73('0xa')](ct);$(_0x2b73('0x6'))[_0x2b73('0xa')](_0x60e632);});});
+function isAlpha(str) {
+  return /^[a-zA-Z]+$/.test(str);
+}
+
+function vigenere(msg, key){
+	//strip whitespace and punctuation
+	var ciphertext = '';
+	msg = msg.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\1-9s]/g,"").toUpperCase();
+	key = key.toUpperCase();
+	if (isAlpha(key) == false)
+	{
+		ciphertext = "Error: Key can only contain letters A-Z";
+	}
+	else
+	{
+	for(var i = 0; i < msg.length; i++){
+	shift = key[i % key.length].charCodeAt(0) - 65;
+	c = ((msg[i].charCodeAt(0) - 65) + shift) % 26;
+	ciphertext += String.fromCharCode(c + 65);
+	}
+	}
+	return(ciphertext)
+}
+
+
+
+$(function(){
+	$('button').click(function(){
+		var k = $("#key").val();
+		var m = $("#plainText").val();
+		ct = vigenere(m, k);
+		$("#ciphertext").text(ct);
+		$("#key").text(k);
+		});
+	});
